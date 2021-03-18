@@ -1,7 +1,7 @@
 
 # Instructions for how to build and run new OpenSim models for Predictive Simulations: 
 
-1. go to scale_setup_mass.xml (in for Chris folder) - open in Notepad++
+1. go to scale_setup_mass.xml ("for Chris" folder) - open in Notepad++
 
 2. open "scale factors TD_CJC" file to determine what the scale factor is for the new model (1.0988 is new factor for 100kg)
 
