@@ -104,7 +104,7 @@ settings = [
  ];
 ```
 
-you will see the first line is at 1.34 m/s this simulation should run ok. If suffessful the next stage is to edit line 34 to run the next few lines in a series. i.e. 
+you will see the first line is at 1.34 m/s this simulation should run ok. If successful the next stage is to edit line 34 to run the next few lines in a series. i.e. 
 
 ```Matlab
 idx_ww = [2:6]; % Index row in matrix settings (1:198)
