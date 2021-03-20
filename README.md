@@ -82,6 +82,73 @@ The first time you run the simulation make sure that line 34 points to the first
 idx_ww = [1]; % Index row in matrix settings (1:198)
 ```
 
+Next check the settings file. Typically the have the following configuration. (with maybe more lines added?) 
+
+```Matlab
+settings = [    
+    % A. Varying prescribed gait speed
+    % Quasi-random initial guess
+    1.34, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 1
+    1.50, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 2
+    1.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 3
+    2.50, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 4
+    2.25, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 5
+    2.75, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 6
+    % Data-informed (partial solution at closest speed) initial guess
+    3.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 7
+    3.25, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 8
+    3.50, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 9
+    3.75, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 10
+    4.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 11
+    4.25, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 1, 0, 0, 0, 0;    % 12
+ ];
+```
+
+you will see the first line is at 1.34 m/s this simulation should run ok. If suffessful the next stage is to edit line 34 to run the next few lines in a series. i.e. 
+
+```Matlab
+idx_ww = [2:6]; % Index row in matrix settings (1:198)
+```
+
+depending on which run the simulation finds an optimal solution at, you can try run a few more option. Lets say our simulations ran at all of them, with the fastest speed being 2.75 m/s (6th option in setting)
+We might then try to run the following simulations by starting at this point. i.e. 
+
+```Matlab
+   % Data-informed (partial solution at closest speed) initial guess
+    3.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 7
+```
+
+This option will run simulation 7 by starting where simulation 6 left off. To run it we would edit line 34. 
+
+```Matlab
+idx_ww = [7]; % Index row in matrix settings (1:198)
+```
+
+if this is ok. Then we might try edit some more lines. i.e. 
+
+```Matlab
+ % Data-informed (partial solution at closest speed) initial guess
+    3.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 7
+    3.25, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 8
+    3.50, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 9
+    3.75, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 10
+    4.00, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 11
+    4.25, 4, 50, 500, 50000, 1000000, 1000, 2000, 2, 2, 3, 6, 0, 0;    % 12
+```
+then run with 
+
+```Matlab
+idx_ww = [8:12]; % Index row in matrix settings (1:198)
+```
+
+some of these will fail. Thats ok. Make sure to record the results in the Scale70runs file in google docs (i know its not named right. 
+
+
+
+
+
+
+
 
 
 
