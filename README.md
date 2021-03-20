@@ -141,8 +141,7 @@ then run with
 idx_ww = [8:12]; % Index row in matrix settings (1:198)
 ```
 
-some of these will fail. Thats ok. Make sure to record the results in the Scale70runs file in google docs (i know its not named right. 
-
+some of these will fail. Thats ok. Make sure to record the results in the Dwarfs+Giants simulation progress file in google docs. Add the number of iterations from the D_ file in the results folder for that model...and keep going!
 
 
 
