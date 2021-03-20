@@ -73,3 +73,17 @@ What to edit the the MATLAB code prior to starting the simulation
 1. check the number of iterations - we are currently running 10,000 (iter)
 2. check the speeds
 
+
+We will run simulations in three step. 
+
+The first time you run the simulation make sure that line 34 points to the first line in the setting matrix (line ~70): i.e
+
+```Matlab
+idx_ww = [1]; % Index row in matrix settings (1:198)
+```
+
+
+
+
+
+
